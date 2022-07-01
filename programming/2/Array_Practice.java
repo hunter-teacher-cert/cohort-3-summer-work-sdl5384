@@ -210,7 +210,9 @@ public class Array_Practice
   public static void flip( int[] data )
   {
     /* YOUR BRILLIANT CODE HERE */
-    
+    for(int 1 =0; i < data.length;i++){
+      
+    }
   }
   public static void main( String[] args )
   {

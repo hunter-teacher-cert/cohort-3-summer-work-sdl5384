@@ -199,8 +199,9 @@ public class Array_Practice
       if(data[i]%2!=0){
         count++;
       }
+    }
+
     return count;
-  }
   }
   /**
      Parameters:
@@ -219,6 +220,7 @@ public class Array_Practice
     /* YOUR BRILLIANT CODE HERE */
     int[] newData = new int[data.length];
     for(int i = data.length - 1; i>=0; i--){ 
+      newData[i] = data[(data.length-1)-i];
     }
   }
   public static void main( String[] args )

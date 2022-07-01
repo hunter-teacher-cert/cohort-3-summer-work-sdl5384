@@ -201,6 +201,7 @@ public class Array_Practice
       }
     return count;
   }
+  }
   /**
      Parameters:
      data - an array of integers
@@ -216,8 +217,8 @@ public class Array_Practice
   public static void flip( int[] data )
   {
     /* YOUR BRILLIANT CODE HERE */
-    for(int 1 =0; i < data.length;i++){
-      
+    int[] newData = new int[data.length];
+    for(int i = data.length - 1; i>=0; i--){ 
     }
   }
   public static void main( String[] args )

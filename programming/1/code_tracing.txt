@@ -1,0 +1,40 @@
+The dog barks
+
+i
+_
+0  T
+
+i
+_
+1  Th
+
+i
+-
+2  The
+
+i
+_
+3  The_
+
+
+i
+_
+4  The_d
+d
+
+i
+_
+5  The do
+print: do
+
+i
+_
+6  The dog
+print: dog
+
+
+
+i
+-
+7 
+print dog

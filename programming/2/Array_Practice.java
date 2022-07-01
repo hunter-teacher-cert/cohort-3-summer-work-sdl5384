@@ -1,4 +1,10 @@
 /**
+
+SAM LOJACONO
+DAVID MOSTE
+ALICIA WADE
+
+
  * ArrayPractice by Team BossCoders
  * First Last
  * collaborators: First Last, First Last

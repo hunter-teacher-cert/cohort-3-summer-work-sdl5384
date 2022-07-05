@@ -269,9 +269,18 @@ public class Array2DPractice
     board[3][4] = 'Z';
     System.out.println("\nBelow is the board for explode char");
     printBoard(board);
-      
     
+    explodeAllChar(board, 'Z');
+    printBoard(board);
+
+      //it should work, lemme know if it does or doesn't
     /*
+        OOOOO
+        OZOOO
+        OOOOO
+        OOOOZ
+        OOOOO
+
       Note, you can directly set elements in the board
       using array notation like b[3][2]='z' and you
       can use array notation to also access individual

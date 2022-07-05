@@ -85,17 +85,17 @@ public class Array2DPractice
      xxxx
      xxxx
      setRow(board,2,'@') will change board to
-      1234
+      0123
+     0xxxx
      1xxxx
-     2xxxx
-     3@@@@
-     4xxxx
+     2@@@@
+     3xxxx
   */
   public static void setRow(char[][] board, int row, char value)
   {                                            // 2nd, to be 'O'
-    for (int i = 0; i < board[i].length; i++)
+    for (int i = 0; i < board[0].length; i++)
     {
-      board[i][row] = value;
+      board[row][i] = value;
     }
   }
 
@@ -226,7 +226,7 @@ public class Array2DPractice
     char[][] b = buildBoard(5,10,'z');
     
     System.out.println("");
-    // setRow(b,2,'c');
+    setRow(b,2,'c');
     //calling the method
     printBoard(b);
 

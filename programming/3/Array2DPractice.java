@@ -168,7 +168,7 @@ public class Array2DPractice
 
      Given the array
 
-     qqzqq
+     qqzqq        (0,2)
      qqqqq
      qqqqq
      qqqqq
@@ -192,6 +192,20 @@ public class Array2DPractice
   public static void explodeAllChar(char[][] board, char c)
   {
     /* YOUR AWESOME CODE HERE */
+      //transverse through the elements in the array and see if they match the char c
+      for(int i=0; i<board.length; i++){
+        for(int j= 0; j<board[i].length; j++)
+        {
+          if (board[i][j]=='c')
+          {
+            explodeSquare(board, i, j);
+          }
+        }
+      }
+      //if they match Z
+
+      //explode the neighbors of Z
+      //explodeSquare(board,0,2)
   }
 
 
@@ -248,6 +262,15 @@ public class Array2DPractice
     System.out.println("\nExplode below");
     explodeSquare(b,2,2);
     printBoard(b);
+
+
+    char[][] board = buildBoard(5,5,'O');
+    board[1][1] = 'Z';
+    board[3][4] = 'Z';
+    System.out.println("\nBelow is the board for explode char");
+    printBoard(board);
+      
+    
     /*
       Note, you can directly set elements in the board
       using array notation like b[3][2]='z' and you

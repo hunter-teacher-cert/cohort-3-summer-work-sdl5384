@@ -156,15 +156,30 @@ public class Array2DPractice
         
             
       }
-    } //<-- delete
+    } 
   }
 
   /**
      This method will search through the 2D array board and it will
      explode each square that contains the char c (using the above
      definition of exploding).
+
      Example:
+
      Given the array
+
+     qqzqq
+     qqqqq
+     qqqqq
+     qqqqq
+     qzqqq
+     qqqqq
+     qqqqz
+
+     ...
+     explodeAllchar(board,'z')
+     will change board to
+
      qXzXq
      qXXXq
      qqqqq
@@ -172,7 +187,7 @@ public class Array2DPractice
      XzXqq
      XXXXX
      qqqXz
-     explodeAllchar(board,'z') will change board to:
+
   */
   public static void explodeAllChar(char[][] board, char c)
   {

@@ -85,16 +85,19 @@ public class Array2DPractice
      xxxx
      xxxx
      setRow(board,2,'@') will change board to
-     xxxx
-     xxxx
-     @@@@
-     xxxx
+      1234
+     1xxxx
+     2xxxx
+     3@@@@
+     4xxxx
   */
   public static void setRow(char[][] board, int row, char value)
-  {
-    
+  {                                            // 2nd, to be 'O'
+    for (int i = 0; i < board[i].length; i++)
+    {
+      board[i][row] = value;
+    }
   }
-
 
   /**
      creates and returns a new 2D array of char the same size as
@@ -138,9 +141,22 @@ public class Array2DPractice
      Note: Make sure to correctly handle the cases when you try
      to explode an element on the edges.
   */
-  public static void explodeSquare( char[][] board, int row, int col )
+  public static void explodeSquare(char[][] board, int row, int col) //(b, 2, 2)
   {
-    /* YOUR AWESOME CODE HERE */
+    //traverse through the elements in row and column 
+    for (int i=0; i<board.length; i++){
+      for (int j=0; j<board[i].length; j++){
+        // if ((i>=row-1 && i<row+1) && (j>=col-1 && j<=col-1) && (i!=row || j!= col))
+        if (i>=row-1 && i<=row+1)    
+          if(j>=col-1 && j<=col+1)
+            if(i!=row || j!= col)
+              // change those letters into Xs
+              // arrayName[i][j] = the change
+              board[i][j] = 'x';
+        
+            
+      }
+    } //<-- delete
   }
 
   /**
@@ -210,8 +226,12 @@ public class Array2DPractice
     char[][] b = buildBoard(5,10,'z');
     
     System.out.println("");
-    setRow(b,2,'c');
-    
+    // setRow(b,2,'c');
+    //calling the method
+    printBoard(b);
+
+    System.out.println("\nExplode below");
+    explodeSquare(b,2,2);
     printBoard(b);
     /*
       Note, you can directly set elements in the board

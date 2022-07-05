@@ -222,7 +222,10 @@ public class Array_Practice
     for(int i = data.length - 1; i>=0; i--){ 
       newData[i] = data[(data.length-1)-i];
     }
+
+    System.out.println(Arrays.toString(newData));
   }
+  
   public static void main( String[] args )
   {
     int[] data3 = new int[]{1,5,2,7,5,8,5,12,19,5};

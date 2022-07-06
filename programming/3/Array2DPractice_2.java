@@ -40,7 +40,7 @@ import java.util.*;
    other methods.
 */
 
-public class Array2DPractice
+public class Array2DPractice_2
 {
   public static char[][] buildBoard(int rows, int cols, char value)
   {
@@ -103,17 +103,12 @@ public class Array2DPractice
      creates and returns a new 2D array of char the same size as
      original and copies all the elements
   */
-  public static char[][] copyBoard(char[][] original)
-  {
-    int row = original.length;
-    int column = original[0].length;
-    char[][] copyCat = new char[row][column];
-    //create 2D array of char
-
-      //transverse again
-      //>>inside the for loop, copy(1,1) = original(1,1)
-  }
-  
+  // public static char[][] copyBoard(char[][] original)
+  // {
+  //   int row = original[].length;
+  //   int column = original[][].length
+  //   char[][] copyCat = new int[copyCat]
+  // }
 
 
   /**
@@ -201,14 +196,16 @@ public class Array2DPractice
       for(int i=0; i<board.length; i++){
         for(int j= 0; j<board[i].length; j++)
         {
-          if (board[i][j]==c) //if they match Z
+          if (board[i][j]==c) //it's c, not 'c'
           {
-              //explode the neighbors of Z
-              //explodeSquare(board,0,2)
-            explodeSquare(board, i, j);   
+            explodeSquare(board, i, j);
           }
         }
       }
+      //if they match Z
+
+      //explode the neighbors of Z
+      //explodeSquare(board,0,2)
   }
 
 

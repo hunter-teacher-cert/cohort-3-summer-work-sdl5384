@@ -157,9 +157,7 @@ public class Array2DPractice
             if(i!=row || j!= col)
               // change those letters into Xs
               // arrayName[i][j] = the change
-              board[i][j] = 'x';
-        
-            
+              board[i][j] = 'x';  
       }
     } 
   }
@@ -192,11 +190,9 @@ public class Array2DPractice
      XzXqq
      XXXXX
      qqqXz
-
   */
   public static void explodeAllChar(char[][] board, char c)
   {
-    /* YOUR AWESOME CODE HERE */
       //transverse through the elements in the array and see if they match the char c
       for(int i=0; i<board.length; i++){
         for(int j= 0; j<board[i].length; j++)
@@ -205,12 +201,11 @@ public class Array2DPractice
           {
               //explode the neighbors of Z
               //explodeSquare(board,0,2)
-            explodeSquare(board, i, j);   
+            explodeSquare(board, i, j); 
           }
         }
       }
   }
-
 
   /**
      Parameters:

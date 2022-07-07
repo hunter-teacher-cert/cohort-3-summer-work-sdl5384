@@ -1,3 +1,4 @@
+
 // Go through the first word character by character without displaying anything
 // Precondition: someString does not begin with spaces. Words are separated by spaces.
 // Thus, someString in position 0 is not a space char.

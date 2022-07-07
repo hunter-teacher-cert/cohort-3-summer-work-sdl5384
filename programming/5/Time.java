@@ -43,6 +43,7 @@ public class Time {
     int hours;
     int minutes;
     int seconds;
+    //use this. to refernce these variables here
 
     // Constructors
     public Time()
@@ -62,6 +63,9 @@ public class Time {
     public Time(int hrs, int mins, int secs)
     {
 	    //enter your code here
+      this.hours = hrs;
+      this.minutes = mins;
+      this.seconds = secs;
     }
     
     
@@ -72,11 +76,9 @@ public class Time {
     */
     public String toString()
     {
-    	return("This should be changed to return the time in a nice form");
+      String strTime = this.hours + ":" + this.minutes + ":" + this.seconds;
+    	return strTime;
     }
-
-
-    
 
     /**
        Parameters:
@@ -84,14 +86,16 @@ public class Time {
 
        modifies this instance to represent the time hrs:mins:secs
     */
-    public void set(int hrs, int mins, int secs){
+    public void set(int hrs, int mins, int secs)
+    {
+      this.hours = hrs;
+      this.minutes = mins;
+      this.seconds = secs;
 	// add the code to add the time represented by other
 	// to this instance.
 
     }
-
-    
-
+  
     /**
        Parameters:
        - other - a variable of type Time
@@ -99,12 +103,29 @@ public class Time {
        modifies this instance to represent the result of adding it and
        the time other.
     */
-    public void add(Time other){
-	// add the code to add the time represented by other
-	// to this instance.
-
+    public void add(Time other)
+    {
+	    this.hours += other.hours;
+      this.minutes += other.minutes;
+      this.seconds += other.seconds;
+      // add the code to add the time represented by other
+	    // to this instance.
+      if (this.seconds > 60)
+      {
+        //add seconds together and the sum is over 60
+        this.minutes++;
+        this.seconds = this.seconds%60;
+      }
+      if (this.minutes > 60)
+      {
+        this.hours++;
+        this.minutes =+ this.minutes%60;
+      }
+      if (this.hours > 12)
+      {
+        this.hours =+ this.hours%12;
+      }
     }
-
 
     /**
        Parameters:

@@ -18,15 +18,20 @@ import java.util.*;
 */
 
 
-public class Driver {
+public class Driver 
+{
+  public static void main(String[] args) 
+  {
 
-    public static void main(String[] args) {
-
-	//declare a var of appropriate type to assign an instance of Time to
-	Time t;
-
-	//assign var the address of a newly-apportioned Time object
-	t = new Time();
-    }//end main()
+  	//declare a var of appropriate type to assign an instance of Time to
+  	Time t;
+  
+  	//assign var the address of a newly-apportioned Time object
+  	t = new Time(12,13,59);
+    t.toString();
+    System.out.println(t);
+    u = new Time(14,58,01);
+      
+  }//end main()
 
 }//end class

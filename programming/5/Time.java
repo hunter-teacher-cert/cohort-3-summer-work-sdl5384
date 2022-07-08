@@ -33,8 +33,6 @@ import java.util.*;
    
 */
 
-
-
 public class Time {
     // Instance Variable(s)
     // You can change this if you want to use the alternate
@@ -71,8 +69,8 @@ public class Time {
     // Methods
 
     /**
-       returns a string representation of the time
-    ]
+       returns a string representation of the time**/
+  
     public String toString()
     {
       String strTime = this.hours + ":" + this.minutes + ":" + this.seconds;

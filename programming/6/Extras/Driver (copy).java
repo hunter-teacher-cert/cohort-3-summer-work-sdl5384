@@ -34,4 +34,45 @@ public class Driver
       ~~~~~|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~*/
   }
 
+  public void reduce()
+  {
+    
+  }
+  //calculates GCD/GCF of numerator and denominator
+  public int gcd()
+  {
+    /*finding the gcd means finding the largest factor two #s have
+    in common*/
+    boolean factorsExhausted = false;
+    /*dividing by zero is undefined and 1 does not have any 
+    factors other than itself*/
+    int i = 2;
+    //num > den if rational > 1, num < den if rational < 1
+    boolean ratGreaterThanOne = true;
+    if (this._numerator/this._denominator > 1)
+    {
+      ratGreaterThanOne = true;
+    }
+    else
+    {
+      ratGreaterThanOne = false;
+    }
+  }
+
+  //calculates GCD/GCF of two int inputs
+  public static int gcd(int n, int d)
+  {
+    
+  }
+
+  public boolean equals(Rational other)
+  {
+    
+  }
+  
+  public int compareTo(Rational other)
+  {
+    
+  }
+
 }//end class

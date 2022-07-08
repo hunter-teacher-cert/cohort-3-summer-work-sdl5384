@@ -87,7 +87,7 @@ public class Rational
     given number of digits*/
     /*will set the default number of digits to be 3 unless 
     method is edited with a parameter given*/
-    return (double)this._numerator/this._denominator;
+    return 1.0*(this._numerator/this._denominator);
   }
 
 

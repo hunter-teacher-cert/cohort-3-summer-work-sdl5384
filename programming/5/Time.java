@@ -72,7 +72,7 @@ public class Time {
 
     /**
        returns a string representation of the time
-    */
+    ]
     public String toString()
     {
       String strTime = this.hours + ":" + this.minutes + ":" + this.seconds;
@@ -137,7 +137,7 @@ public class Time {
     public boolean equals(Time other)
     {
 	// your code here)
-      if(this.hours==other.hours && this.minute==other.minute && this.second==other.second)
+      if(this.hours==other.hours && this.minutes==other.minutes && this.seconds==other.seconds)
       {
         return true;
       }
@@ -178,30 +178,31 @@ public class Time {
       else if (this.hours < other.hours) {
         return -1;
       }
-      else {
-        
-        if (this.minutes > other.minutes) {
+      else 
+      {
+        if (this.minutes > other.minutes) 
+        {
           return 1;
         } 
-        else if (this.minutes < other.minutes) {
+        else if (this.minutes < other.minutes) 
+        {
           return -1;
         }
-        else {
-
-          if (this.seconds > other.seconds) {
+        else 
+        {
+          if (this.seconds > other.seconds) 
+          {
             return 1;
           }
-          else if (this.seconds < other.seconds) {
+          else if (this.seconds < other.seconds) 
+          {
             return -1;
           }
-          else {
+          else 
+          {
             return 0;
           }
-          
         }
-      
+      }
     }
-    
-
-    
 }//end class

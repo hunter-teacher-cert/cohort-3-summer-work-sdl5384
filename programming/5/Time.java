@@ -120,9 +120,9 @@ public class Time {
         this.hours++;
         this.minutes =+ this.minutes%60;
       }
-      if (this.hours > 12)
+      if (this.hours > 24)
       {
-        this.hours =+ this.hours%12;
+        this.hours =+ this.hours%24;
       }
     }
 
@@ -161,10 +161,45 @@ public class Time {
        0 if the two instances represent the same time.
 
     */
-    public int compareTo(Time other){
-	// your code here)
+    public int compareTo(Time other)
+    {
+      //comparing two times to the one that is passed in the parameter
+	    // your code here)
 
-	return 0; // change this
+      //9:32:15 and //13:10:09
+
+      // compare the hours and determine which is greater
+
+      // if the hours are the same, compare the minutes and determine which is greater
+
+	    if (this.hours > other.hours) {
+        return 1;
+      }
+      else if (this.hours < other.hours) {
+        return -1;
+      }
+      else {
+        
+        if (this.minutes > other.minutes) {
+          return 1;
+        } 
+        else if (this.minutes < other.minutes) {
+          return -1;
+        }
+        else {
+
+          if (this.seconds > other.seconds) {
+            return 1;
+          }
+          else if (this.seconds < other.seconds) {
+            return -1;
+          }
+          else {
+            return 0;
+          }
+          
+        }
+      
     }
     
 

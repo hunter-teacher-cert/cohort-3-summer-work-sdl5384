@@ -30,7 +30,7 @@ public class Driver
   	t = new Time(12,13,59);
     t.toString();
     System.out.println(t);
-    u = new Time(14,58,01);
+    Time u = new Time(14,58,01);
       
   }//end main()
 

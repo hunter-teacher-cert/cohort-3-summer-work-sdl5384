@@ -68,7 +68,6 @@ public class Time {
       this.seconds = secs;
     }
     
-    
     // Methods
 
     /**
@@ -91,8 +90,8 @@ public class Time {
       this.hours = hrs;
       this.minutes = mins;
       this.seconds = secs;
-	// add the code to add the time represented by other
-	// to this instance.
+  	// add the code to add the time represented by other
+  	// to this instance.
 
     }
   
@@ -135,10 +134,17 @@ public class Time {
        True if this instance and other represents the same time
        false otherwise.
     */
-    public boolean equals(Time other){
+    public boolean equals(Time other)
+    {
 	// your code here)
-
-	return false; // change this
+      if(this.hours==other.hours && this.minute==other.minute && this.second==other.second)
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
     }
 
     /**

@@ -26,8 +26,6 @@ import java.lang.Math.*;
    -
 
 */
-
-
 public class Rational
 {
   // Instance variables aka attributes for numerator and denominator

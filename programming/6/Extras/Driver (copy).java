@@ -2,6 +2,7 @@
  * class Driver
  * tester class for class Rational
  */
+import java.util.*;
 
 public class Driver
 {
@@ -44,19 +45,33 @@ public class Driver
     /*finding the gcd means finding the largest factor two #s have
     in common*/
     boolean factorsExhausted = false;
+    ArrayList<Integer> divisors = new ArrayList<Integer>();
     /*dividing by zero is undefined and 1 does not have any 
     factors other than itself*/
-    int i = 2;
-    //num > den if rational > 1, num < den if rational < 1
-    boolean ratGreaterThanOne = true;
-    if (this._numerator/this._denominator > 1)
+    int firstDivisor = 2;
+    result = result%2;
+
+    //factor out by 2 each time until you cannot use it anymore
+    while (result%2 == 0)  //is it divisible by 2?
     {
-      ratGreaterThanOne = true;
+      result = result/2;
+      divisors.add(2);
     }
-    else
+    while (result%3 == 0) //is it divisible by 3?
     {
-      ratGreaterThanOne = false;
+      result = result/3;
+      divisors.add(3);
     }
+    while (result%5 == 0)  //is it divisible by 5?
+    {
+      result = result/5;
+      divisors.add(5);
+    }
+    while (result%7 == 0) //is it divisible by 7?
+    {
+      result = result/7;
+      divisors.add(7);
+    }    
   }
 
   //calculates GCD/GCF of two int inputs

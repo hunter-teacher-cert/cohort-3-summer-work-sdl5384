@@ -93,7 +93,7 @@ public class AlPractice
   public static void removeValue(ArrayList<Integer> dataList, int valueToRemove)
   {
     for(int i = 0; i < dataList.size(); i ++){
-      if (dataList.get(i)==valueToRemove){
+      if (dataList.get(i) == valueToRemove){
         dataList.remove(i);
       }
     }

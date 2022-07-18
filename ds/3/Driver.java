@@ -11,9 +11,13 @@ public class Driver
     l.add("Curly");
     l.add("Shemp");
     l.add("Jerry Seinfeld");
-    
+    System.out.println(l); System.out.println(l.get(0));
     System.out.println(l.size());
-    
+    l.add(0, "tester");
+    System.out.println(l.size());
     System.out.println(l);
+    //  l.add(5, "testera");
+    // System.out.println(l.size());
+    // System.out.println(l);
   }
 }

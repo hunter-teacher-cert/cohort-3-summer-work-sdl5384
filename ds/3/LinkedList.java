@@ -2,6 +2,7 @@ import java.io.*;
 import java.util.*;
 
 /**
+Sam Lojacono, Seth Adams, Tanya W
 For all attempted methods, make sensible decisions for error and
 edge cases (such as indexing out of bounds).
 
@@ -42,15 +43,15 @@ public class LinkedList
   */
   public void add(String value)
   {
-    Node tempNode = new Node(value);
+    Node walker = new Node(value);
     if(head == null)
     {
-      head = tempNode;
+      head = walker;
     }
     else 
     {
-      tempNode.setNext(head); 
-      head = tempNode;    
+      walker.setNext(head); 
+      head = walker;    
     }
   }
 
@@ -60,17 +61,17 @@ public class LinkedList
   public String get(int index)
   {
     int counter = 0;
-    Node tempNode = head;//creates temp node and sets it to head
+    Node walker = head;//creates temp node to walk down the list and sets it to head
     while (counter != index)
     {
-      tempNode = tempNode.getNext();
+      walker = walker.getNext();
       counter++;
-      if(tempNode == null) 
+      if(walker == null) //catches any out of bounds indexes
       {
         return "";
       }
     }
-    return tempNode.getData();
+    return walker.getData();
   }
 //
   /**
@@ -79,12 +80,13 @@ public class LinkedList
   public String toString()
   {
     String data = "";
-    Node tempNode = head;//creates temp node and sets it to head
-    while(tempNode != null)
+    Node walker = head;//creates temp node and sets it to head
+    while(walker != null)
     {
-      data = tempNode.getData() + "-->" + data;
-      tempNode = tempNode.getNext();
+      data = data + walker.getData() + "-->";
+      walker = walker.getNext();
     } 
+    data = data + "null";
     return data;
   }
 
@@ -94,15 +96,14 @@ public class LinkedList
   public int size()
   {
     int counter = 0;
-    Node tempNode = head;//creates temp node and sets it to head
-    while(tempNode != null)
+    Node walker = head;//creates temp node and sets it to head
+    while(walker != null)
     {
-      tempNode = tempNode.getNext();
+      walker = walker.getNext();
       counter++;
     }
     return counter;
   }
-
 
 
   /**
@@ -120,11 +121,27 @@ public class LinkedList
   "a"-> "z" -> "b" -> "c" -> "d"
 
   */
-  public void add(int index, String value)
+public void add(int index, String value)
+{
+  //start 
+  Node walker = head;//set new node to walker and find index
+  //Node insertedNode = new Node(value); //creates the temp node to be inserted
+  int counter = 0;
+  //cycle through nodes until you reach index i
+  if (index == 0) {
+    walker.setNext(new Node(value, walker.getNext())); 
+    head=walker;
+  } else {
+  while (walker != null && counter != index-1)
   {
-
+    walker = walker.getNext();
+    counter++;
+    //if counter is index, then insert the new node with value at index i
   }
-
+    Node insertedNode = new Node(value, walker.getNext()); 
+  walker.setNext(insertedNode);
+  }
+}
 
   /**
   Returns the index (location) of the first node in the list

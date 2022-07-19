@@ -47,7 +47,7 @@ public class ComplexNumbers
   //for dividing, cannot have a square root in the denominator,
   //need to RATIONALIZE IT, multiply BOTH top and bottom by
   //CONJUGATE of denominator
-
+  
   private void conjugate()
   {
     this._imaginary = -1*this._imaginary;

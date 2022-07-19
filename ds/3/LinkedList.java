@@ -129,8 +129,7 @@ public void add(int index, String value)
   int counter = 0;
   //cycle through nodes until you reach index i
   if (index == 0) {
-    walker.setNext(new Node(value, walker.getNext())); 
-    head=walker;
+    add(value);
   } else {
   while (walker != null && counter != index-1)
   {
@@ -155,7 +154,15 @@ public void add(int index, String value)
   */
   public int indexOf(String value)
   {
-    return 0;
+    int counter = 0;
+    Node walker = head;
+    while (walker.getData() != value)
+    {
+      walker = walker.getNext();
+      counter++;
+    }
+    
+    return counter;
   }
 
 
@@ -169,7 +176,15 @@ public void add(int index, String value)
   */
   public String[] toArray()
   {
-    return null;
+    int arraySize = size();
+    String linkedListToArray[] = new String[arraySize];
+    int i = 0;
+    while (i < arraySize)
+    {
+      linkedListToArray[i] =  get(i);
+      i++;
+    }
+    return linkedListToArray;
   }
 
 
@@ -187,5 +202,6 @@ public void add(int index, String value)
   */
   public void remove(int index)
   {
+    
   }
 }

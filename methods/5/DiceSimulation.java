@@ -27,6 +27,7 @@ public class DiceSimulation
     {
       diceRolls[i] = RollADie();
     }
+    return diceRolls;
   }
   
   public static void main(String[] args)

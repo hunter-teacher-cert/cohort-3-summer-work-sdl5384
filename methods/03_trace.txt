@@ -1,0 +1,68 @@
+Sam D. Lojacono
+Team Breakout Room 15 :: <roster>
+Methods - Summer 2022
+
+CODE TRACING in the classroom
+======================================
+
+
+PROS:
+---------------------------------------
+- helps you understand on the code given
+- helps you track on what each line of the code
+- test and check the codes for mistakes
+- VERY VISUAL, can appeal to visual learners
+
+<general positive aspects of incorporating code or algorithm tracing into a CS course, from your perspective>
+
+
+CONS:
+---------------------------------------
+- could be time consuming, may not be best to do it everyday
+
+<general negative aspects of incorporating code or algorithm tracing into a CS course, from your perspective>
+
+
+BEST FOR:
+---------------------------------------
+- good for recursion and loops
+- could work well for looping and sorting
+<types of activities from courses you teach or have taught that could benefit from an emphasis on tracing>
+
+
+LEAST-SUITED TO:
+---------------------------------------
+- code that is really simple
+- may not be best for coding and teaching arrays
+
+<opposite of above -- and why>
+
+
+PROVEN PRO-TIPS:
+---------------------------------------
+- use colors
+- use different diagrams
+- talk about it first
+- use different colors for each team member in the class
+<
+ anything that has worked well for any member of your team, in the way of ...
+ * live tracing ("trace-along" a la livecoding)
+ * tracing as an assignment
+ * tools, physical/online/otherwise that make it easier/clearer
+ * etc 
+>
+
+
+RESOURCES:
+---------------------------------------
+1. Dive into algorithms - Bradford Truckfield
+2. Excel 2016 VBA and Macros - Bill Jelen
+3. PANDAS for everyone - Daniel Y. Chen
+4. Doing Math with Python - Amit Saha
+5. https://www.youtube.com/watch?v=TZss5ukwN8s 
+< any links, reading titles, names, etc. you have find useful >
+
+
+OTHER:
+---------------------------------------
+< anything you like, not already covered in prior prompts. >

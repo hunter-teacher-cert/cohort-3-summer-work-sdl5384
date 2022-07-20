@@ -4,7 +4,7 @@ import java.lang.Math.*;
 
 public class ComplexNumbers
 {
-  int _realComponent = 0;
+  int _real = 0;
   int _imaginary = 0;
   public static final int i_squared = -1;
   public static final int i_4th = 1;
@@ -17,8 +17,14 @@ public class ComplexNumbers
 
   public ComplexNumbers(int real, int imaginary)
   {
-    _realComponent = real;
+    _real = real;
     _imaginary = imaginary;
+  }
+
+  public void setValues(int re, int im)
+  {
+    _real = re;
+    _imaginary = im;
   }
 
   public String toString()
@@ -26,19 +32,19 @@ public class ComplexNumbers
     String complexNumber;
     if (this._imaginary < 0)
     {
-      complexNumber = Integer.toString(this._realComponent) + " - " + Integer.toString(Math.abs(this._imaginary)) + "i";
+      complexNumber = Integer.toString(this._real) + " - " + Integer.toString(Math.abs(this._imaginary)) + "i";
       System.out.println(complexNumber);
     }
     else
-      complexNumber = Integer.toString(this._realComponent) + " + " + Integer.toString(this._imaginary) + "i";
+      complexNumber = Integer.toString(this._real) + " + " + Integer.toString(this._imaginary) + "i";
       System.out.println(complexNumber);
 
     return complexNumber;
   }
 
-  public ComplexNumbers add(ComplexNumbers a, ComplexNumbers b)
+  public static ComplexNumbers add(ComplexNumbers a, ComplexNumbers b)
   {
-    int realSum = a._realComponent + b._realComponent;
+    int realSum = a._real + b._real;
     int imaginarySum = a._imaginary + b._imaginary;
     ComplexNumbers sum = new ComplexNumbers(realSum,imaginarySum);
     return sum;
@@ -47,27 +53,68 @@ public class ComplexNumbers
   //for dividing, cannot have a square root in the denominator,
   //need to RATIONALIZE IT, multiply BOTH top and bottom by
   //CONJUGATE of denominator
+
+  // private static int countDecimalPlaces(double value)
+  // {
+  //   int countDigits = 0;
+  //   value = Math.abs(value);
+  //   String decimal = Double.toString(value - Math.floor(value));
+
+  //   return countDigits;
+  // }
+
   
   private void conjugate()
   {
     this._imaginary = -1*this._imaginary;
   }
 
-  private void rationalize()
+  // private void rationalize()
+  // {
+  //   int digits = countDecimalPlaces(this.numerator);
+
+  // }
+  
+  public static ComplexNumbers multiply(ComplexNumbers a, ComplexNumbers b)
   {
-    
-  }
-  public ComplexNumbers muiltiply(ComplexNumbers a, ComplexNumbers b)
-  {
-    ComplexNumbers product;
     //(a + bi)*(c + di)
+    //  a         b
     //ac + adi + bci + bd(i)^2
+
+    int prodOne = a._real*b._real;
+    int prodTwoImag = a._real*b._imaginary;
+    int prodThreeImag = a._imaginary*b._real;
+    int prodFour = (-1)*a._imaginary*b._imaginary;
+
+    int realSum = prodOne + prodFour;
+    int imaginarySum = prodTwoImag + prodThreeImag;
+    ComplexNumbers p = new ComplexNumbers(realSum, imaginarySum);
+
+    return p;
   }
 
-  public static void main(String[] args)
+  public static ComplexNumbers divide(ComplexNumbers a, ComplexNumbers b)
   {
-    ComplexNumbers c = new ComplexNumbers(5,3);
+    //a is numerator, b is denominator in that order
+    int conjugateNumeratorProduct = 0;
+    //cannot have a radical or an i in denominator
+    b.conjugate();
 
-    c.toString();
+    //multiply the conjugate with the numerator
+    ComplexNumbers nonConjugated = b;
+    b.conjugate();
+
+    ComplexNumbers quotient = new ComplexNumbers();
+    quotient = ComplexNumbers.multiply(a,b);
+
+    ComplexNumbers conjugateProduct = new ComplexNumbers();
+    conjugateProduct = multiply(nonConjugated,b);
+
+    double realQuotient, imagQuotient;
+    realQuotient = (double)(product._real/conjugateProduct._real);
+    imagQuotient = (double)(product._imaginary/conjugateProduct._imaginary);
+
+    quotient = set(realQuotient,imagQuotient);
+    
   }
 }

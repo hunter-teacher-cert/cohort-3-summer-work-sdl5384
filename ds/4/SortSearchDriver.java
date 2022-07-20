@@ -25,8 +25,18 @@ public class SortSearchDriver {
 	System.out.println(ss);
 	ss.sort();
 	System.out.println(ss);
-	
 
+  System.out.println("------------------lin test------------------");
+  System.out.println(ss);
+  long startTime = System.nanoTime();
+  System.out.println(ss.linearSearch(0));
+  System.out.println(ss.linearSearch(10));
+	System.out.println(ss.linearSearch(21));
+  long endTime = System.nanoTime();
+  System.out.println("Time to execute test series with lin:" + (endTime - startTime));
+  System.out.println();
+	
+  
 
 	      
 

@@ -131,27 +131,50 @@ public class SortSearch
        This algorithm works on any ArrayList.
 
     */
-    public int linearSearch(int value){
-	
-	
-	return 0; // replace this return
+  public int linearSearch(int value)
+  {
+    int firstOccurrence = -1;  // base case not foudn
+
+    int i = 0;
+    while((i < data.size()) &&(firstOccurrence == -1))
+    { // only runs while fO not found
+      if(data.get(i) == value)
+      { 
+        firstOccurrence = i; // found value
+
+      }
+      i++;
     }
+    /*
+      for (int i = 0; i < data.size(); i++)
+      {
+        if (value == data.get(i))
+        {
+          firstOccurrence = i;
+        }
+        else
+          return -1;
+      }
+    */
+    return firstOccurrence;
+  }
     
     /**
        Implement a binary search as specified by the comments
        
        This algorithm only works on sorted ArrayLists.
     */
-    public int binarySearch(int value){
+  public int binarySearch(int value)
+  {
 
-	// create assign variables  representing the high, low and middle indices 
-	// while we're not done:
-	//   if the item is at data.get(middle), return middle
-	//   otherwise, update high, low, and middle
-
-	return 0;
+  	// create assign variables  representing the high, low and middle indices 
+  	// while we're not done:
+  	//   if the item is at data.get(middle), return middle
+  	//   otherwise, update high, low, and middle
+  
+  	return 0;
 	    
-    }
+  }
     
     /**
        Implement a RECURSIVE binary search as specified by the comments
@@ -159,25 +182,25 @@ public class SortSearch
        This algorithm only works on sorted ArrayLists.
     */
 
-    public int binarySearchRecursive(int value, int lowIndex, int highIndex){
+  public int binarySearchRecursive(int value, int lowIndex, int highIndex)
+  {
 
-	// refer to class discussion
-	
-	return 0;
+  	// refer to class discussion
+  	
+  	return 0;
 	    
-    }
+  }
     
 	
-    public String toString(){
-	return ""+data;
-    };
+  public String toString()
+  {
+	  return ""+data;
+  };
 
 
-    public void builtinSort(){
-	Collections.sort(data);
+  public void builtinSort()
+  {
+	  Collections.sort(data);
 	
-    }
-    
-
-    
+  } 
 }

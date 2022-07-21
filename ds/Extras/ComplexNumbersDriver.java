@@ -7,8 +7,10 @@ public class ComplexNumbersDriver
 
     ComplexNumbers a = ComplexNumbers.add(c,d);
     ComplexNumbers m = ComplexNumbers.multiply(c,d);
+    ComplexNumbers q = ComplexNumbers.divide(c,d);
   
     a.toString();
-    m.toString();    
+    m.toString();
+    q.toString();
   }
 }

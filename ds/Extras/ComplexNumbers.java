@@ -4,8 +4,8 @@ import java.lang.Math.*;
 
 public class ComplexNumbers
 {
-  int _real = 0;
-  int _imaginary = 0;
+  int _real = 1;
+  int _imaginary = 1;
   public static final int i_squared = -1;
   public static final int i_4th = 1;
   
@@ -105,16 +105,17 @@ public class ComplexNumbers
     b.conjugate();
 
     ComplexNumbers quotient = new ComplexNumbers();
-    quotient = ComplexNumbers.multiply(a,b);
 
-    ComplexNumbers conjugateProduct = new ComplexNumbers();
-    conjugateProduct = multiply(nonConjugated,b);
+    ComplexNumbers numerator = new ComplexNumbers();
+    ComplexNumbers denominator = new ComplexNumbers();
+    numerator = multiply(a,b);
+    denominator = multiply(nonConjugated,b);
 
     double realQuotient, imagQuotient;
-    realQuotient = (double)(product._real/conjugateProduct._real);
-    imagQuotient = (double)(product._imaginary/conjugateProduct._imaginary);
+    realQuotient = (double)(numerator._real/denominator._real);
+    imagQuotient = (double)(numerator._imaginary/denominator._imaginary);
 
-    quotient = set(realQuotient,imagQuotient);
-    
+    quotient.setValues((int)realQuotient,(int)imagQuotient);
+    return quotient;
   }
 }

@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.*;
+import java.lang.Math.*;
 
 /*
 
@@ -145,17 +146,6 @@ public class SortSearch
       }
       i++;
     }
-    /*
-      for (int i = 0; i < data.size(); i++)
-      {
-        if (value == data.get(i))
-        {
-          firstOccurrence = i;
-        }
-        else
-          return -1;
-      }
-    */
     return firstOccurrence;
   }
     
@@ -166,14 +156,35 @@ public class SortSearch
     */
   public int binarySearch(int value)
   {
-
   	// create assign variables  representing the high, low and middle indices 
   	// while we're not done:
   	//   if the item is at data.get(middle), return middle
   	//   otherwise, update high, low, and middle
-  
-  	return 0;
-	    
+    int low, mid, high;
+    //in case data.size() is an odd number, we will use the floor function to keep it       as an integer
+    //initializing low, mid, and high
+    low = 0;
+    high = data.size();
+    mid = (low + high)/2;
+    while (low < high)
+    {
+      //if value is less than data.get(mid), then we need to move one unit to the left
+      if (value == data.get(mid))
+      {
+        return mid;
+      }
+      else if (value < data.get(mid))
+      {
+        high = mid - 1;
+        mid = (low + high)/2;
+      }
+      else if (value > data.get(mid))
+      {
+        low = mid + 1;
+        mid = (low + high)/2;
+      }
+    }
+  	return -1;
   }
     
     /**
@@ -184,11 +195,30 @@ public class SortSearch
 
   public int binarySearchRecursive(int value, int lowIndex, int highIndex)
   {
+    int mid = (lowIndex + highIndex)/2;
 
-  	// refer to class discussion
-  	
-  	return 0;
-	    
+    //if value is less than data.get(mid), then we need to move one unit to the left
+    if (lowIndex > highIndex)
+    {
+      return -1;
+    }
+
+    if (value == data.get(mid))
+    {
+      return mid;
+    }
+    else if (value < data.get(mid))
+    {
+      // high = mid - 1;
+      // mid = (lowIndex + highIndex)/2;
+      return binarySearchRecursive(value, 0, mid-1);
+    }
+    //the case if it is greater than
+    else
+    {
+      return binarySearchRecursive(value, mid+1, highIndex);
+    }
+  	// return 0;  
   }
     
 	

@@ -177,9 +177,18 @@ public class SortSearchReference{
 	} else {
 	    return binarySearchRecursive(value,middle+1,highIndex);
 	}
-	
-	    
     }
+  
+  public void SortSearch(int size)
+    {
+    	data = new ArrayList<Integer>();
+    	r = new Random();
+    	for (int i=0;i<size;i++)
+      {
+    	  data.add(r.nextInt(20));
+  	  }
+    }
+  
     public int binarySearchRecursive(int value){
 	return binarySearchRecursive(value,0,data.size());
     }

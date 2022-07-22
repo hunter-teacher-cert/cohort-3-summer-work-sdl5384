@@ -43,5 +43,11 @@ public class SortSearchReferenceDriver
     ss.binarySearchRecursive(valueInQuestion,0,size-1);
     System.out.println("Time for " + valueInQuestion + " using binarySearchRecursive...");
     System.out.println("Size: " + size + " Time: " + elapsed);
+
+    start = System.currentTimeMillis();
+    elapsed = System.currentTimeMillis() - start;
+    ss.SortSearch(size-1);
+    System.out.println("Time for " + valueInQuestion + " using SortSearch...");
+    System.out.println("Size: " + size + " Time: " + elapsed);
   }
 }

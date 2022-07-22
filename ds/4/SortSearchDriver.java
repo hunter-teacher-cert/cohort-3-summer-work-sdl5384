@@ -1,3 +1,6 @@
+//Sam Lojacono, Harrison Feung, Maxwell Yearwood
+//also worked with Marieke Thomas and Alicia Wade on this src file
+
 import java.io.*;
 import java.util.*;
 
@@ -5,8 +8,6 @@ public class SortSearchDriver
 {
   public static void main(String[] args) 
   {
-  
-  
   	// Uncomment these to test part 1
   	
   	SortSearch ss = new SortSearch(20);

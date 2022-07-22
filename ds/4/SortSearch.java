@@ -166,7 +166,7 @@ public class SortSearch
     low = 0;
     high = data.size();
     mid = (low + high)/2;
-    while (low < high)
+    while (low <= high)
     {
       //if value is less than data.get(mid), then we need to move one unit to the left
       if (value == data.get(mid))
